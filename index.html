@@ -249,6 +249,54 @@
     letter-spacing: 0.06em;
   }
 
+  /* ── Meme Stock 插叙 ── */
+  .meme-box {
+    margin: 3vh 0;
+    padding: 3vh 3vw;
+    border: 0.5px solid rgba(180,170,150,0.12);
+    border-radius: 2px;
+    background: rgba(180,170,150,0.015);
+  }
+  .meme-box h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #b0a898;
+    letter-spacing: 0.05em;
+    margin-bottom: 2vh;
+  }
+  .meme-box p {
+    font-size: 14px;
+    color: #9a958c;
+    margin-bottom: 1.5vh;
+    letter-spacing: 0.03em;
+  }
+  .meme-box p strong {
+    color: #b8b3a8;
+    font-weight: 500;
+  }
+  .meme-list {
+    list-style: none;
+    font-size: 14px;
+    color: #9a958c;
+    margin: 1.5vh 0;
+    padding: 0;
+  }
+  .meme-list li {
+    padding: 8px 0 8px 18px;
+    border-bottom: 0.5px solid rgba(180,170,150,0.05);
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  }
+  .meme-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #5e5a54;
+  }
+  .meme-list li:last-child { border-bottom: none; }
+  .meme-list li strong { color: #b8b3a8; font-weight: 500; }
+
   /* ── 角色卡片 ── */
   .player-cards {
     display: grid;
@@ -518,6 +566,47 @@
     <p>2020年夏天，Cohen 做了一件反常的事：他不在自己创办的公司里待着，而是<strong>大举买入一家"快要死了"的实体游戏零售商 GameStop 的股票</strong>，持股比例一度超过10%。</p>
     <p>2020年11月，他给 GameStop 董事会写了一封公开信，措辞极其犀利——直指公司"在电商时代仍然沉迷于实体门店扩张"，管理层"缺乏任何数字业务的愿景"。这封信在 Reddit 的 WallStreetBets 论坛上炸了锅。散户把他视为"自己人"——一个愿意挑战华尔街体制的亿万富翁。</p>
     <p>2021年1月，在散户逼空大战最激烈的时候，Cohen 加入 GameStop 董事会。同月，被散户推上神坛的 meme stock 现象级事件爆发——GME 股价从 $20 飙升至 $483。2023年9月，Cohen 亲自出任 CEO，年薪<strong>$0</strong>，但签下了那笔著名的350亿美元股权激励协议。</p>
+
+    <!-- Meme Stock 插叙 -->
+    <div class="meme-box">
+      <h4>插叙：什么是"Meme Stock"？——2021年那场散户起义</h4>
+
+      <p>Meme Stock 这个词，直译是"梗股"。它不是金融术语，而是互联网原生现象。<strong>核心逻辑：大量散户通过社交媒体协调行动，集中买入某只被机构高度做空的股票，把股价推上天，让空头爆仓。</strong></p>
+
+      <p>2020年底，Reddit 上的 WallStreetBets 论坛（简称 WSB，一个充斥着极端风险偏好和黑色幽默的散户社区）有人发现：<strong>GameStop 的做空比例超过了140%</strong>。这意味着市场上被借出去做空的股票数量，比实际流通股还多。这个发现点燃了导火索。</p>
+
+      <p>逻辑很简单：如果散户把流通筹码都买光，空头到期必须买回股票平仓，但市面上已经没有股票可买了——只能以任何价格从散户手里抢。这是一个<strong>"无限轧空"（infinite short squeeze）</strong>的理论剧本。</p>
+
+      <p>然后这件事真的发生了。</p>
+
+      <div class="stats-strip" style="margin: 2vh 0;">
+        <div class="stat-item">
+          <div class="stat-value">$20</div>
+          <div class="stat-label">2021年1月初股价</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">$483</div>
+          <div class="stat-label">2021年1月28日盘中最高</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">24×</div>
+          <div class="stat-label">不到一个月涨幅</div>
+        </div>
+      </div>
+
+      <p>这期间发生了电影都编不出来的情节：</p>
+      <ul class="meme-list">
+        <li><strong>Robinhood 限制买入</strong>：1月28日，散户大本营 Robinhood 突然禁止用户买入 GME，只许卖不许买。这个决定后来引发了国会听证会，CEO 被传唤。</li>
+        <li><strong>Melvin Capital 被逼到濒死</strong>：知名对冲基金 Melvin Capital 重仓做空 GME，亏损超过50亿美元，最终靠 Citadel 和 Point72 紧急注资才活下来。几个月后 Melvin 宣布清盘。</li>
+        <li><strong>空头累计亏损超200亿美元</strong>：根据 S3 Partners 数据，2021年全年做空 GME 的机构合计亏损超过200亿美元。</li>
+        <li><strong>散户的宗教化</strong>：GME 不再是股票代码，变成了一场运动。口号是"to the moon"（到月球去）、"diamond hands"（钻石手，指死都不卖）、"HODL"（拼写错误的 hold）。散户们在论坛上晒交割单、画火箭表情、把浮亏百万的账户截图当勋章。</li>
+      </ul>
+
+      <p>这件事的长期遗产有三样：</p>
+      <p>🔸 <strong>GameStop 拿到了续命钱</strong>：2021年，趁着股价在高位，GameStop 多次增发股票，筹集了超过30亿美元的现金。这笔钱后来成了 Ryan Cohen 转型公司的基础弹药——包括现在用来收购 eBay 的90亿现金，相当一部分就来自这次增发。<br>
+      🔸 <strong>散户集体行动成为资产定价的新变量</strong>：在 meme stock 之前，散户对股价没有影响力。之后，任何做空比例高、故事性强的股票都可能成为目标。AMC、黑莓、Bed Bath & Beyond 相继被卷入。<br>
+      🔸 <strong>Cohen 和散户之间形成了一种非正式契约</strong>：散户给 Cohen 投票权，Cohen 替散户"战斗"。这种关系超越了传统的股东-管理层关系，更接近一场社会运动与其领袖的关系。理解这一点，才能理解为什么 Cohen 敢做蛇吞象级别的收购——<strong>他的股东不是华尔街基金经理，是一群把他当教主的人。</strong></p>
+    </div>
 
     <h3>第三幕：他的真实底色</h3>
     <p>理解 Cohen 是理解这笔交易的关键。他身上有几个矛盾特征：</p>
